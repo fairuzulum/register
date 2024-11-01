@@ -13,7 +13,7 @@ function Home() {
         </div>
         <div className="qrcode">
           <QRCodeCanvas
-            value="http://localhost:3000/register"
+            value="https://register-theta-orpin.vercel.app/register"
             bgColor="transparent"
             size={250} 
           />
