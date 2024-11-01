@@ -8,7 +8,7 @@ import { collection, addDoc } from "firebase/firestore";
 const RegistrationForm = () => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
-  const [instansi, setInstansi] = useState("");
+  const [instance, setInstansi] = useState("");
   const [customInstansi, setCustomInstansi] = useState("");
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,7 @@ const RegistrationForm = () => {
       await addDoc(collection(db, "registrations"), {
         fullname,
         email,
-        instansi: instansi === "other" ? customInstansi : instansi,
+        instance: instance === "other" ? customInstansi : instance,
       });
       window.location.href = "/congratulations";
     } catch (error) {
@@ -58,21 +58,21 @@ const RegistrationForm = () => {
         </div>
         <div className="input-container">
           <select
-            value={instansi}
+            value={instance}
             onChange={(e) => setInstansi(e.target.value)}
-            id="instansi"
-            name="instansi"
+            id="instance"
+            name="instance"
             required
           >
             <option value="" disabled>
               Choose
             </option>
-            <option value="instansi1">Instansi 1</option>
-            <option value="instansi2">Instansi 2</option>
+            <option value="EXP inc">EXP inc</option>
+            <option value="UMM">UMM</option>
             <option value="other">Other</option>
           </select>
         </div>
-        {instansi === "other" && (
+        {instance === "other" && (
           <div className="input-container">
             <input
               type="text"
