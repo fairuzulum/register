@@ -1,6 +1,6 @@
 import "../styles/form.css";
 import grid from "../assets/grid.png";
-import logo from "../assets/logo.png";
+import logo from "../assets/logofinal.png";
 import React, { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
@@ -9,6 +9,7 @@ const RegistrationForm = () => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [instansi, setInstansi] = useState("");
+  const [customInstansi, setCustomInstansi] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const RegistrationForm = () => {
       await addDoc(collection(db, "registrations"), {
         fullname,
         email,
-        instansi,
+        instansi: instansi === "other" ? customInstansi : instansi,
       });
       window.location.href = "/congratulations";
     } catch (error) {
@@ -27,7 +28,7 @@ const RegistrationForm = () => {
   return (
     <div className="form-container">
       <div className="logo-placeholder">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo00" />
       </div>
       <div className="register-text">Register Here</div>
       <form onSubmit={handleSubmit}>
@@ -63,14 +64,27 @@ const RegistrationForm = () => {
             name="instansi"
             required
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Choose
             </option>
             <option value="instansi1">Instansi 1</option>
             <option value="instansi2">Instansi 2</option>
-            <option value="instansi3">Instansi 3</option>
+            <option value="other">Other</option>
           </select>
         </div>
+        {instansi === "other" && (
+          <div className="input-container">
+            <input
+              type="text"
+              id="customInstansi"
+              name="customInstansi"
+              value={customInstansi}
+              onChange={(e) => setCustomInstansi(e.target.value)}
+              required
+            />
+            <label htmlFor="customInstansi">Input Instansi</label>
+          </div>
+        )}
         <button type="submit">Continue</button>
       </form>
       <center>

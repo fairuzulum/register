@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import * as XLSX from "xlsx";
 import print from "../assets/print.png";
 import "../styles/report.css";
+import logo from "../assets/logofinal.png";
 
 function Report() {
   const [users, setUsers] = useState([]);
@@ -26,6 +27,7 @@ function Report() {
   return (
     <div className="container">
       <div className="content">
+        <img src={logo} alt="Logo" className="logo" />
         <p>To print register data</p>
         <img
           onClick={exportToExcel}

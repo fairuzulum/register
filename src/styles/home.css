@@ -1,0 +1,106 @@
+body {
+  background: linear-gradient(180deg, #f5e5a8, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.container-qr {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.logo-qr-container {
+  display: flex;
+  align-items: center; /* Vertically center logos and QR code */
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Stack logos vertically */
+  margin-right: 200px; /* Space between logos and QR code */
+}
+
+.logo005 {
+  width: 461px; /* Adjust logo width as needed */
+  height: 261px; /* Adjust logo height as needed */
+  margin-bottom: 20px; /* Space between logos */
+}
+
+.qrcode {
+  padding: 10px;
+  position: relative; /* Membuat elemen ini menjadi parent untuk anak-anak */
+  display: inline-block; /* Menjaga ukuran elemen */
+}
+
+.corner {
+  padding: 20px;
+  position: absolute;
+  width: 20px;
+  height: 20px; 
+  background-color: transparent;
+  border: 5px solid yellow; 
+}
+
+.top-left {
+  top: -5px;
+  left: -5px;
+  border-right: none; 
+  border-bottom: none;
+}
+
+.top-right {
+  top: -5px;
+  right: -5px;
+  border-left: none; 
+  border-bottom: none;
+}
+
+.bottom-left {
+  bottom: -5px;
+  left: -5px;
+  border-top: none; 
+  border-right: none;
+}
+
+.bottom-right {
+  bottom: -5px;
+  right: -5px;
+  border-top: none; 
+  border-left: none;
+}
+
+.grid {
+  width: 1600px;
+  margin-top: -150px;
+}
+
+@media (max-width: 768px) {
+    .logo-qr-container {
+        margin-top: 100px;
+      flex-direction: column; 
+      align-items: center; 
+    }
+      
+    .logo005 {
+        margin-bottom: 10px;
+        width: 361px;;
+        height: 161px;
+    }
+  
+    .logo-container {
+      margin-right: 0; 
+      margin-bottom: 20px; 
+    }
+  
+    .qrcode {
+      margin: 0 auto; 
+    }
+  }
+  
