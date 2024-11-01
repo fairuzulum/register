@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -10px;
+  margin-top: -100px;
 }
 
 .print {
@@ -37,5 +37,14 @@
 @media (max-width: 600px) {
   .print {
     width: 150px; /* Ukuran tombol lebih kecil di layar kecil */
+  }
+
+  .logo600 {
+    width: 300px; /* Ukuran logo lebih kecil di layar kecil */
+    height: 100px; /* Ukuran logo lebih kecil di layar kecil */
+  }
+
+  .content {
+    margin-top: -120px; /* Mengubah margin agar lebih rapi di layar kecil */
   }
 }

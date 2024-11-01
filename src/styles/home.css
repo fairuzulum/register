@@ -8,6 +8,20 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+.card {
+  background: linear-gradient(
+    180deg,
+    #fffce9 0%,
+    rgba(255, 252, 233, 0.23) 100%
+  );
+  margin-top: 350px;
+  border-radius: 48px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container-qr {
   text-align: center;
   display: flex;
@@ -28,79 +42,93 @@ body {
 }
 
 .logo005 {
-  width: 461px; /* Adjust logo width as needed */
-  height: 261px; /* Adjust logo height as needed */
+  width: 661px; /* Adjust logo width as needed */
+  height: 361px; /* Adjust logo height as needed */
   margin-bottom: 20px; /* Space between logos */
+  z-index: 10;
 }
 
 .qrcode {
-  padding: 10px;
+  padding: 34px;
   position: relative; /* Membuat elemen ini menjadi parent untuk anak-anak */
   display: inline-block; /* Menjaga ukuran elemen */
+  z-index: 10;
 }
 
 .corner {
   padding: 20px;
   position: absolute;
   width: 20px;
-  height: 20px; 
+  height: 20px;
   background-color: transparent;
-  border: 5px solid yellow; 
+  border: 5px solid yellow;
 }
 
 .top-left {
   top: -5px;
   left: -5px;
-  border-right: none; 
+  border-right: none;
   border-bottom: none;
 }
 
 .top-right {
   top: -5px;
   right: -5px;
-  border-left: none; 
+  border-left: none;
   border-bottom: none;
 }
 
 .bottom-left {
   bottom: -5px;
   left: -5px;
-  border-top: none; 
+  border-top: none;
   border-right: none;
 }
 
 .bottom-right {
   bottom: -5px;
   right: -5px;
-  border-top: none; 
+  border-top: none;
   border-left: none;
 }
 
-.grid {
+.grid01 {
   width: 1600px;
-  margin-top: -150px;
+  margin-top: 80px;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
-    .logo-qr-container {
-        margin-top: 100px;
-      flex-direction: column; 
-      align-items: center; 
-    }
-      
-    .logo005 {
-        margin-bottom: 10px;
-        width: 361px;;
-        height: 161px;
-    }
-  
-    .logo-container {
-      margin-right: 0; 
-      margin-bottom: 20px; 
-    }
-  
-    .qrcode {
-      margin: 0 auto; 
-    }
+  .logo-qr-container {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    margin-bottom: -900px;
   }
-  
+
+  .card {
+    margin-top: 0px;
+    padding: 50px;
+  }
+
+  .grid01 {
+    width: 700px;
+    margin-top: 500px;
+  }
+
+  .logo005 {
+    margin-bottom: 10px;
+    width: 361px;
+    height: 161px;
+  }
+
+  .logo-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .qrcode {
+    margin: 0 auto;
+  }
+}

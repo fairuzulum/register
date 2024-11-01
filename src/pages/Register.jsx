@@ -27,6 +27,8 @@ const RegistrationForm = () => {
 
   return (
     <div className="form-container">
+      <div className="card1">
+
       <div className="logo-placeholder">
         <img src={logo} alt="Logo" className="logo00" />
       </div>
@@ -65,7 +67,7 @@ const RegistrationForm = () => {
             required
           >
             <option value="" disabled>
-              Choose
+              Instance
             </option>
             <option value="EXP inc">EXP inc</option>
             <option value="UMM">UMM</option>
@@ -82,7 +84,7 @@ const RegistrationForm = () => {
               onChange={(e) => setCustomInstansi(e.target.value)}
               required
             />
-            <label htmlFor="customInstansi">Input Instansi</label>
+            <label htmlFor="customInstansi">Input Instance</label>
           </div>
         )}
         <button type="submit">Continue</button>
@@ -90,6 +92,8 @@ const RegistrationForm = () => {
       <center>
         <img src={grid} alt="Grid" className="grid" />
       </center>
+      </div>
+
     </div>
   );
 };
