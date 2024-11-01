@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .container {
-  width: 206vh;
+  width: 205vh; /* Mengubah menjadi 100% agar responsif */
   height: 100vh;
   background: white;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.logo600{
+    width: 361px;
+    height: 161px;
+    margin-bottom: 20px;
 }
 
 .content {
@@ -25,4 +31,11 @@
 
 .print:hover {
   transform: scale(1.1);
+}
+
+/* Media query untuk ukuran layar yang lebih kecil */
+@media (max-width: 600px) {
+  .print {
+    width: 150px; /* Ukuran tombol lebih kecil di layar kecil */
+  }
 }

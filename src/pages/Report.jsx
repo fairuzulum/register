@@ -27,7 +27,7 @@ function Report() {
   return (
     <div className="container">
       <div className="content">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo600" />
         <p>To print register data</p>
         <img
           onClick={exportToExcel}
